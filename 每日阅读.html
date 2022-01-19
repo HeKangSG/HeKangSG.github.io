@@ -7,16 +7,16 @@
   
   <title>高质量C编程指南(林锐) | 尔康</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言  软件质量是被大多数程序员挂在嘴上而不是放在心上的东西！ 除了完全外行和真正的编程高手外，初读本书，你最先的感受将是惊慌：“哇！我以前捏造的 C++&#x2F;C 程序怎么会有那么多的毛病？” 别难过，作者只不过比你早几年、多几次惊慌而已。 请花一两个小时认真阅读这本百页经书，你将会获益匪浅，这是前面 N-1个读者的建议。 一、编程老手与高手的误区 编程老手与高手的误区 自从计算机问世以来，程序设计就">
+  <meta name="description" content="前言  软件质量是被大多数程序员挂在嘴上而不是放在心上的东西！ 除了完全外行和真正的编程高手外，初读本书，你最先的感受将是惊慌：“哇！我以前捏造的 C++&#x2F;C 程序怎么会有那么多的毛病？” 别难过，作者只不过比你早几年、多几次惊慌而已。 请花一两个小时认真阅读这本百页经书，你将会获益匪浅，这是前面 N-1个读者的建议。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高质量C编程指南(林锐)">
 <meta property="og:url" content="https://gitee.com/no-two-no-small/no-two-no-small/%E6%AF%8F%E6%97%A5%E9%98%85%E8%AF%BB.html">
 <meta property="og:site_name" content="尔康">
-<meta property="og:description" content="前言  软件质量是被大多数程序员挂在嘴上而不是放在心上的东西！ 除了完全外行和真正的编程高手外，初读本书，你最先的感受将是惊慌：“哇！我以前捏造的 C++&#x2F;C 程序怎么会有那么多的毛病？” 别难过，作者只不过比你早几年、多几次惊慌而已。 请花一两个小时认真阅读这本百页经书，你将会获益匪浅，这是前面 N-1个读者的建议。 一、编程老手与高手的误区 编程老手与高手的误区 自从计算机问世以来，程序设计就">
+<meta property="og:description" content="前言  软件质量是被大多数程序员挂在嘴上而不是放在心上的东西！ 除了完全外行和真正的编程高手外，初读本书，你最先的感受将是惊慌：“哇！我以前捏造的 C++&#x2F;C 程序怎么会有那么多的毛病？” 别难过，作者只不过比你早几年、多几次惊慌而已。 请花一两个小时认真阅读这本百页经书，你将会获益匪浅，这是前面 N-1个读者的建议。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://news.xidian.edu.cn/images/16/06/12/293fpvvj2d/56C6275F49A4C2C4139A7820E05747A0.jpg">
 <meta property="article:published_time" content="2022-01-19T09:35:10.000Z">
-<meta property="article:modified_time" content="2022-01-19T09:57:56.266Z">
+<meta property="article:modified_time" content="2022-01-19T10:22:44.899Z">
 <meta property="article:author" content="He Kang">
 <meta property="article:tag" content="C">
 <meta property="article:tag" content="电子书">
@@ -98,8 +98,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>前言 </p>
-<p>软件质量是被大多数程序员挂在嘴上而不是放在心上的东西！<br> 除了完全外行和真正的编程高手外，初读本书，你最先的感受将是惊慌：<br>“哇！我以前捏造的 C++/C 程序怎么会有那么多的毛病？”<br> 别难过，作者只不过比你早几年、多几次惊慌而已。<br> 请花一两个小时认真阅读这本百页经书，你将会获益匪浅，这是前面 N-1<br>个读者的建议。</p>
-<p>一、编程老手与高手的误区 编程老手与高手的误区</p>
+<p>软件质量是被大多数程序员挂在嘴上而不是放在心上的东西！<br> 除了完全外行和真正的编程高手外，初读本书，你最先的感受将是惊慌：<br>“哇！我以前捏造的 C++/C 程序怎么会有那么多的毛病？”<br> 别难过，作者只不过比你早几年、多几次惊慌而已。<br> 请花一两个小时认真阅读这本百页经书，你将会获益匪浅，这是前面 N-1<br>个读者的建议。<br> <span id="more"></span><br>一、编程老手与高手的误区 编程老手与高手的误区</p>
 <p>自从计算机问世以来，程序设计就成了令人羡慕的职业，程序员在受人宠爱<br>之后容易发展成为毛病特多却常能自我臭美的群体。<br>如今在 Internet 上流传的“真正”的程序员据说是这样的：<br>(1) 真正的程序员没有进度表，只有讨好领导的马屁精才有进度表，真正的程<br>序员会让领导提心吊胆。<br>(2) 真正的程序员不写使用说明书，用户应当自己去猜想程序的功能。<br>(3) 真正的程序员几乎不写代码的注释，如果注释很难写，它理所当然也很难<br>读。<br>(4) 真正的程序员不画流程图，原始人和文盲才会干这事。<br>(5) 真正的程序员不看参考手册，新手和胆小鬼才会看。<br>(6) 真正的程序员不写文档也不需要文档，只有看不懂程序的笨蛋才用文档。<br>(7) 真正的程序员认为自己比用户更明白用户需要什么。<br>(8) 真正的程序员不接受团队开发的理念，除非他自己是头头。<br>(9) 真正的程序员的程序不会在第一次就正确运行，但是他们愿意守着机器进<br>行若干个 30 小时的调试改错。<br>(10)真正的程序员不会在上午 9:00 到下午 5:00 之间工作，如果你看到他在上午<br>9:00 工作，这表明他从昨晚一直干到现在。<br>……<br>具备上述特征越多，越显得水平高，资格老。所以别奇怪，程序员的很多缺<br>点竟然可以被当作优点来欣赏。就象在武侠小说中，那些独来独往、不受约束且<br>带点邪气的高手最令人崇拜。我曾经也这样信奉，并且希望自己成为那样的“真<br>正”的程序员，结果没有得到好下场。</p>
 <p>我从读大学到博士毕业十年来一直勤奋好学，累计编写了数十万行 C++/C 代<br>码。有这样的苦劳和疲劳，我应该称得上是编程老手了吧？<br>我开发的软件都与科研相关（集成电路 CAD 和 3D 图形学领域），动辄数万<br>行程序，技术复杂，难度颇高。这些软件频频获奖，有一个软件获得首届中国大<br>学生电脑大赛软件展示一等奖。在 1995 年开发的一套图形软件库到 2000 年还有<br>人买。罗列出这些“业绩”，可以说明我算得上是编程高手了吧？<br>可惜这种个人感觉不等于事实。</p>
 <p>读博期间我曾用一年时间开发了一个近 10 万行 C++代码的 3D 图形软件产品，<br>我内心得意表面谦虚地向一位真正的软件高手请教。他虽然从未涉足过 3D 图形<br>领域，却在几十分钟内指出该软件多处重大设计错误。让人感觉那套软件是用纸<br>糊的华丽衣服，扯一下掉一块，戳一下破个洞。我目瞪口呆地意识到这套软件毫<br>无实用价值，一年的心血白化了，并且害死了自己的软件公司。</p>
@@ -123,7 +122,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gitee.com/no-two-no-small/no-two-no-small/%E6%AF%8F%E6%97%A5%E9%98%85%E8%AF%BB.html" data-id="ckyldh0nh000smceq91ubbkjy" class="article-share-link">Share</a>
+      <a data-url="https://gitee.com/no-two-no-small/no-two-no-small/%E6%AF%8F%E6%97%A5%E9%98%85%E8%AF%BB.html" data-id="ckyled1j6000aggeq3x6echys" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/no-two-no-small/tags/C/" rel="tag">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/no-two-no-small/tags/%E6%9E%97%E9%94%90/" rel="tag">林锐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/no-two-no-small/tags/%E7%94%B5%E5%AD%90%E4%B9%A6/" rel="tag">电子书</a></li></ul>
