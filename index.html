@@ -67,6 +67,143 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-每日阅读" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/no-two-no-small/%E6%AF%8F%E6%97%A5%E9%98%85%E8%AF%BB.html" class="article-date">
+  <time datetime="2022-01-19T09:35:10.000Z" itemprop="datePublished">2022-01-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/no-two-no-small/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a>►<a class="article-category-link" href="/no-two-no-small/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/">C</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/no-two-no-small/%E6%AF%8F%E6%97%A5%E9%98%85%E8%AF%BB.html">高质量C编程指南(林锐)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前言 </p>
+<p>软件质量是被大多数程序员挂在嘴上而不是放在心上的东西！<br> 除了完全外行和真正的编程高手外，初读本书，你最先的感受将是惊慌：<br>“哇！我以前捏造的 C++/C 程序怎么会有那么多的毛病？”<br> 别难过，作者只不过比你早几年、多几次惊慌而已。<br> 请花一两个小时认真阅读这本百页经书，你将会获益匪浅，这是前面 N-1<br>个读者的建议。</p>
+<p>一、编程老手与高手的误区 编程老手与高手的误区</p>
+<p>自从计算机问世以来，程序设计就成了令人羡慕的职业，程序员在受人宠爱<br>之后容易发展成为毛病特多却常能自我臭美的群体。<br>如今在 Internet 上流传的“真正”的程序员据说是这样的：<br>(1) 真正的程序员没有进度表，只有讨好领导的马屁精才有进度表，真正的程<br>序员会让领导提心吊胆。<br>(2) 真正的程序员不写使用说明书，用户应当自己去猜想程序的功能。<br>(3) 真正的程序员几乎不写代码的注释，如果注释很难写，它理所当然也很难<br>读。<br>(4) 真正的程序员不画流程图，原始人和文盲才会干这事。<br>(5) 真正的程序员不看参考手册，新手和胆小鬼才会看。<br>(6) 真正的程序员不写文档也不需要文档，只有看不懂程序的笨蛋才用文档。<br>(7) 真正的程序员认为自己比用户更明白用户需要什么。<br>(8) 真正的程序员不接受团队开发的理念，除非他自己是头头。<br>(9) 真正的程序员的程序不会在第一次就正确运行，但是他们愿意守着机器进<br>行若干个 30 小时的调试改错。<br>(10)真正的程序员不会在上午 9:00 到下午 5:00 之间工作，如果你看到他在上午<br>9:00 工作，这表明他从昨晚一直干到现在。<br>……<br>具备上述特征越多，越显得水平高，资格老。所以别奇怪，程序员的很多缺<br>点竟然可以被当作优点来欣赏。就象在武侠小说中，那些独来独往、不受约束且<br>带点邪气的高手最令人崇拜。我曾经也这样信奉，并且希望自己成为那样的“真<br>正”的程序员，结果没有得到好下场。</p>
+<p>我从读大学到博士毕业十年来一直勤奋好学，累计编写了数十万行 C++/C 代<br>码。有这样的苦劳和疲劳，我应该称得上是编程老手了吧？<br>我开发的软件都与科研相关（集成电路 CAD 和 3D 图形学领域），动辄数万<br>行程序，技术复杂，难度颇高。这些软件频频获奖，有一个软件获得首届中国大<br>学生电脑大赛软件展示一等奖。在 1995 年开发的一套图形软件库到 2000 年还有<br>人买。罗列出这些“业绩”，可以说明我算得上是编程高手了吧？<br>可惜这种个人感觉不等于事实。</p>
+<p>读博期间我曾用一年时间开发了一个近 10 万行 C++代码的 3D 图形软件产品，<br>我内心得意表面谦虚地向一位真正的软件高手请教。他虽然从未涉足过 3D 图形<br>领域，却在几十分钟内指出该软件多处重大设计错误。让人感觉那套软件是用纸<br>糊的华丽衣服，扯一下掉一块，戳一下破个洞。我目瞪口呆地意识到这套软件毫<br>无实用价值，一年的心血白化了，并且害死了自己的软件公司。</p>
+<p>人的顿悟通常发生在最心痛的时刻，在沮丧和心痛之后，我作了深刻反省，<br>“面壁”半年，重新温习软件设计的基础知识。补修“内功”之后，又觉得腰板<br>硬了起来。博士毕业前半年，我曾到微软中国研究院找工作，接受微软公司一位<br>资深软件工程师的面试。他让我写函数 strcpy 的代码。<br>太容易了吧？<br>错！<br>这么一个小不点的函数，他从三个方面考查：<br>（1）编程风格；<br>（2）出错处理；<br>（3）算法复杂度分析（用于提高性能）。<br>在大学里从来没有人如此严格地考查过我的程序。我化了半个小时，修改了<br>数次，他还不尽满意，让我回家好好琢磨。我精神抖擞地进“考场”，大汗淋漓<br>地出“考场”。这“高手”当得也太窝囊了。我又好好地反省了一次。</p>
+<p>我把反省后的心得体会写成文章放在网上传阅，引起了不少软件开发人员的<br>共鸣。我因此有幸和国产大型 IT 企业如华为、上海贝尔、中兴等公司的同志们<br>广泛交流。大家认为提高质量与生产率是软件工程要解决的核心问题。高质量程<br>序设计是非常重要的环节，毕竟软件是靠编程来实现的。<br>我们心目中的老手们和高手们能否编写出高质量的程序来？<br>不见得都能！</p>
+<p>就我的经历与阅历来看，国内大学的计算机教育压根就没有灌输高质量程序<br>设计的观念，教师们和学生们也很少自觉关心软件的质量。勤奋好学的程序员长<br>期在低质量的程序堆中滚爬，吃尽苦头之后才有一些心得体会，长进极慢，我就<br>是一例。<br>现在国内 IT 企 业拥有学士、硕士、博士文凭的软件开发人员比比皆是，但<br>他们在接受大学教育时就“先天不足”，岂能一到企业就突然实现质的飞跃。试<br>问有多少软件开发人员对 正确性、健壮性、可靠性、效率、易用性、可读性（可<br>理解性）、可扩展性、可复用性、兼容性、可移植性等质量属性了如指掌？并且<br>能在实践中运用自如？。“高 质量”可不是干活小心点就能实现的！</p>
+<p>我们有充分的理由疑虑：<br>（1）编程老手可能会长期用隐含错误的方式编程（习惯成自然），发现毛病后<br>都不愿相信那是真的！<br>（2）编程高手可以在某一领域写出极有水平的代码，但未必能从全局把握软件<br>质量的方方面面。</p>
+<p> 事实证明如此。我到上海贝尔工作一年来，陆续面试或测试过近<br>百名“新”“老”程序员的编程技能，质量合格率大约是 10％。很少有人能够<br>写出完全符合质量要求的 if 语句，很多程序员对指针、内存管理一知半解，……。<br>领导们不敢相信这是真的。我做过现场试验：有一次部门新进 14 名硕士生，<br>在开欢迎会之前对他们进行“C++/C 编程技能”摸底考试。我问大家试题难不难？<br>所有的人都回答不难。结果没有一个人及格，有半数人得零分。竞争对手公司的<br>朋友们也做过试验，同样一败涂地。</p>
+<p>真的不是我“心狠手辣”或者要求过高，而是很多软件开发人员对自己的要<br>求不够高。<br>要知道华为、上海贝尔、中兴等公司的员工素质在国内 IT 企业中是比较前<br>列的，倘若他们的编程质量都如此差的话，我们怎么敢期望中小公司拿出高质量<br>的软件呢？连程序都编不好，还谈什么振兴民族软件产业，岂不胡扯。</p>
+<p>我打算定义编程老手和编程高手，请您别见笑。<br>定义 1：能长期稳定地编写出高质量程序的程序员称为编程老手。<br>定义 2：能长期稳定地编写出高难度、高质量程序的程序员称为编程高手。<br>根据上述定义，马上得到第一推论：我既不是高手也算不上是老手。</p>
+<p>在写此书前，我阅读了不少程序设计方面的英文著作，越看越羞惭。因为发<br>现自己连编程基本技能都未能全面掌握，顶多算是二流水平，还好意思谈什么老<br>手和高手。希望和我一样在国内土生土长的程序员朋友们能够做到：<br>（1）知错就改；<br>（2）经常温故而知新；<br>（3）坚持学习，天天向上。</p>
+<p>二、本书导读</p>
+<p> 首先请做附录 B 的 C++/C 试题（不要看答案），考查自己的编程质量究<br>竟如何。然后参照答案严格打分。<br>（1） 如果你只得了几十分，请不要声张，也不要太难过。编程质量差往往是由<br>于不良习惯造成的，与人的智力、能力没有多大关系，还是有药可救的。成绩越<br>差，可以进 步的空间就越大，中国不就是在落后中赶超发达资本主义国家吗？<br>只要你能下决心改掉不良的编程习惯，第二次考试就能及格了。<br>（2）如果你考及格了，表明你的技术基础不错，希望你能虚心学习、不断进步。<br>如果你还没有找到合适的工作单位，不妨到上海贝尔试一试。<br>（3）如果你考出 85 分以上的好成绩，你有义务和资格为你所在的团队作“C++/C<br>编程”培训。希望你能和我们多多交流、相互促进。半年前我曾经发现一颗好苗<br>子，就把他挖到我们小组来。<br>（4）如果你在没有任何提示的情况下考了满分，希望你能收我做你的徒弟。</p>
+<p> 编程考试结束后，请阅读本书的正文。<br> 本书第一章至第六章主要论述 C++/C 编程风格。难度不高，但是细节比<br>较多。别小看了，提高质量就是要从这些点点滴滴做起。世上不存在最好 的编<br>程风格，一切因需求而定。团队开发讲究风格一致，如果制定了大家认可的编程<br>风格，那么所有组员都要遵守。如果读者觉得本书的编程风格比较合你的工作，<br>那么就采用它，不要只看不做。人在小时候说话发音不准，写字潦草，如果不改<br>正，总有后悔的时候。编程也是同样道理。<br> 第七章至第十一章是专题论述，技术难度比较高，看书时要积极思考。<br>特别是第七章“内存管理”，读了并不表示懂了，懂了并不表示就能正确使 用。<br>有一位同事看了第七章后觉得“野指针”写得不错，与我切磋了一把。可是过了<br>两周，他告诉我，他忙了两天追查出一个 Bug，想不到又是“野指针”出问 题，<br>只好重读第七章。<br>光看本书对提高编程质量是有限的，建议大家阅读本书的参考文献，那些都<br>是经典名著。</p>
+<p> 如果你的编程质量已经过关了，不要就此满足。如果你想成为优<br>秀的软件开发人员，建议你阅读并按照 CMMI 规范做事，让自己的综合水平上升<br>一个台阶。上海贝尔的员工可以向网络应用事业部软件工程研究小组索取 CMMI<br>有关资料，最好能参加培训。</p>
+<p>三、版权声明</p>
+<p> 本书的大部分内容取材于作者一年前的书籍手稿（尚未出版），<br>现整理汇编成为上海贝尔网络应用事业部的一个规范化文件，同时作为培训教<br>材。<br> 由于 C++/C 编程是众所周知的技术，没有秘密可言。编程的好经<br>验应该大家共享，我们自己也是这么学来的。作者愿意公开本书的电子文档。<br> 版权声明如下：<br>（1）读者可以任意拷贝、修改本书的内容，但不可以篡改作者及所属单位。<br>（2）未经作者许可，不得出版或大量印发本书。<br>（3）如果竞争对手公司的员工得到本书，请勿公开使用，以免发生纠纷。<br> 预计到 2002 年 7 月，我们将建立切合中国国情的 CMMI 3 级解决<br>方案。届时，包括本书在内的约 1000 页规范将严格受控。</p>
+<p> 欢迎读者对本书提出批评建议。</p>
+<p>林锐，2001 年 7 月<br><img src="https://news.xidian.edu.cn/images/16/06/12/293fpvvj2d/56C6275F49A4C2C4139A7820E05747A0.jpg" alt="林锐"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gitee.com/no-two-no-small/no-two-no-small/%E6%AF%8F%E6%97%A5%E9%98%85%E8%AF%BB.html" data-id="ckyldh0nh000smceq91ubbkjy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/no-two-no-small/tags/C/" rel="tag">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/no-two-no-small/tags/%E6%9E%97%E9%94%90/" rel="tag">林锐</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/no-two-no-small/tags/%E7%94%B5%E5%AD%90%E4%B9%A6/" rel="tag">电子书</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-C语言练习题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/no-two-no-small/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A0%E9%A2%98.html" class="article-date">
+  <time datetime="2022-01-19T06:43:00.000Z" itemprop="datePublished">2022-01-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/no-two-no-small/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a>►<a class="article-category-link" href="/no-two-no-small/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/">C</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/no-two-no-small/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A0%E9%A2%98.html">C语言练习题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2022/1/19<br>一、选择题</p>
+<ol>
+<li>以下选项中不合法的用户标识符是( )。<br>A、abc.c<br>B、file<br>C、Main<br>D、PRINT<br>答案：A</li>
+<li>下列标识符组中，合法的用户标识符为( )。<br>A、_0123 与 ssiped<br>B、del-word 与 signed<br>C、list 与*jer<br>D、keep%与 wind<br>答案：A</li>
+<li>C 语言程序是由( )组成。<br>A、程序<br>B、语句<br>C、字符<br>D、函数<br>答案：D</li>
+<li>以下不是关键字的是( )。<br>A、continue<br>B、char<br>C、If<br>D、default<br>答案：C</li>
+<li>以下叙述错误的是( )。<br>A、一个 C 程序总是从 main 函数开始执行的;<br>B、C 程序书写格式自由,一行内可以写几个语句,一个语句可以分写在多行上;<br>C、每个语句和数据定义的最后必须有一个分号;<br>D、C 语言本身有输入输出语句<br>答案：D</li>
+<li>以下叙述中正确的是( )。<br>A、C 语言的源程序不必通过编译就可以直接运行<br>B、C 语言中的每条可执行语句最终都都将被转换成二进制的机器指令<br>C、C 源程序经编译形成的二进制代码可以直接运行<br>D、C 语言中的函数不可以单独进行<br>答案：B</li>
+<li>下列叙述中错误的是( )。<br>A、计算机不能直接执行用 C 语言编写的源程序<br>B、C 程序经 C 编译程序编译后，生成后缀为.obj 的文件<br>C、后缀为.obj 的文件，经连接程序后生成后缀为.exe 文件<br>D、后缀为.obj 和.exe 的文件都可以直接运行<br>答案：D</li>
+<li>在 C 语言中，要求参加运算的数必须是整数的运算符是( )。<br>A、%<br>B、/<br>C、!<br>D、*<br>答案：A</li>
+<li>若变量 c 为 char 型，能正确判断出 c 为小写字母的表达式是( )。<br>A、’a’&lt;=c&lt;=’z’<br>B、(c&gt;=’a’)||(c&lt;=’z’)<br>C、(‘a’&lt;=c)and(‘z’&gt;=c)<br>D、(c&gt;=’a’)&amp;&amp;(c&lt;=’z’)<br>答案：D</li>
+<li>下面选项中表示合法的数据是( )。<br>A、0668<br>B、2e4.5<br>C、123a<br>D、160.<br>答案：D</li>
+<li>以下选项中,不合法常量的是( )。<br>A、1.234e04<br>B、1.234e0.4<br>C、1.234e+4<br>D、1.234e0<br>答案：B</li>
+<li>C 语言中最简单的数据类型包括( )。<br>A、整型、实型、逻辑型<br>B、整型、实型、字符型<br>C、整型、字符型、逻辑型<br>D、整型、实型、逻辑型、字符型<br>答案：B</li>
+<li>能正确表示逻辑关系:“10≥=a≥=0”的 C 语言表达式是( )。<br>A、10&gt;=a&gt;=0<br>B、a&gt;=0 and a&lt;=10<br>C、a&gt;=0||a&lt;=10<br>D、a&gt;=0&amp;&amp;a&lt;=10<br>答案：D</li>
+<li>设 x 和 y 均为 int 型变量,则以下语句:x+=y;y=x-y;x-=y;的功能是( )。<br>A、把 x 和 y 按从大到小排列<br>B、把 x 和 y 按从小到大排列<br>C、无确定结果<br>D、交换 x 和 y 中的值<br>答案：D</li>
+<li>C 语言中, 下列字符常量合法的是( )。<br>A、’\t’<br>B、”A”<br>C、65<br>D、A<br>答案：A</li>
+</ol>
+<p>二、编程题</p>
+<ol>
+<li>输入三个整数作为三角形的三条边，判断如果不能构成一个三角形，则输出“not a triangle”;否则如能构成一个直角三角形，则输出”yes”;否则输出”no”。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int a, b, c;</span><br><span class="line">	while(scanf(&quot;%d %d %d&quot;,&amp;a, &amp;b,&amp;c)!=EOF)</span><br><span class="line">	if((a+b&gt;c)&amp;&amp;(a+c&gt;b)&amp;&amp;(b+c&gt;a))</span><br><span class="line">		&#123;</span><br><span class="line">			if((a*a + b*b == c*c)||(a*a + c*c == b*b)||(b*b + c*c == a*a))</span><br><span class="line">			printf(&quot;yes\n&quot;);</span><br><span class="line">			else printf(&quot;no\n&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	else printf(&quot;not a triangle\n&quot;);</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+复习：<a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-function-scanf.html">C 库函数 - scanf()</a></li>
+</ol>
+<ol start="2">
+<li>请编程实现从键盘输入10个数，求输入的正数之和。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int a[10];</span><br><span class="line">	int i = 0;</span><br><span class="line">	int j = 0;</span><br><span class="line">	int k = 0;</span><br><span class="line">	int b[10];</span><br><span class="line">	int sum;</span><br><span class="line">	while(i &lt; 10)</span><br><span class="line">		&#123;</span><br><span class="line">			scanf(&quot;%d&quot;, &amp;a[i]);</span><br><span class="line">			if(a[i] &gt; 0)</span><br><span class="line">				&#123;</span><br><span class="line">					b[j] = a[i];</span><br><span class="line">					j ++;</span><br><span class="line">				&#125; </span><br><span class="line">			i ++;</span><br><span class="line">		&#125;</span><br><span class="line">	</span><br><span class="line">	for(k = 0; k &lt; j; k++)</span><br><span class="line">	sum += b[k];</span><br><span class="line">	printf(&quot;%d\n&quot;, sum);</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+复习:<a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-arrays.html">C 数组</a></li>
+</ol>
+<ol start="3">
+<li>请编程实现输出自然数1到1000中含有数字2的数的个数。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"> </span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">        int i = 0;             /*1=&lt;i&lt;=1000*/</span><br><span class="line">        int j = 0;             /*控制输出个数为10时换行*/</span><br><span class="line">        int count = 0;         /*计数符合要求的数的个数*/</span><br><span class="line">        int one, two, three;   /*one(百位) two(十位) three(个位)*/</span><br><span class="line"> </span><br><span class="line">        for (i=1; i&lt;=1000; i++)</span><br><span class="line">			&#123;</span><br><span class="line">	            one   = i/100;    //提取百位数 </span><br><span class="line">	            two   = i%100/10; //提取十位数 </span><br><span class="line">	            three = i%10;     //提取个位数 </span><br><span class="line">	            if (2==one || 2==two || 2==three)</span><br><span class="line">					&#123;</span><br><span class="line">		                j ++;</span><br><span class="line">		                count ++;</span><br><span class="line">		                printf(&quot;%3d &quot;, i);  //%3d表示把结果进行排版 </span><br><span class="line">		            &#125;</span><br><span class="line">	            if (10==j)  //每执行10次就再将结果换行输出 </span><br><span class="line">					&#123;</span><br><span class="line">	                    j = 0;</span><br><span class="line">	                    printf(&quot;\n&quot;);</span><br><span class="line">	                &#125;</span><br><span class="line">	        &#125;</span><br><span class="line">        printf(&quot;总数为：%d\n&quot;, count);</span><br><span class="line">        return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+复习:<a target="_blank" rel="noopener" href="https://blog.csdn.net/modi000/article/details/107688563">C语言计数器</a>、<a target="_blank" rel="noopener" href="https://www.cnblogs.com/Ph-one/p/12176136.html">C语言如何提取个,十,百,千位上的数字</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://gitee.com/no-two-no-small/no-two-no-small/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A0%E9%A2%98.html" data-id="ckyldh0mx0000mceq6aclache" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/no-two-no-small/tags/C/" rel="tag">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/no-two-no-small/tags/%E7%BB%83%E4%B9%A0%E9%A2%98/" rel="tag">练习题</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-质数的孤独" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/no-two-no-small/%E8%B4%A8%E6%95%B0%E7%9A%84%E5%AD%A4%E7%8B%AC.html" class="article-date">
@@ -128,7 +265,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gitee.com/no-two-no-small/no-two-no-small/%E8%B4%A8%E6%95%B0%E7%9A%84%E5%AD%A4%E7%8B%AC.html" data-id="ckyk40wov0000ckeqegko8tgj" class="article-share-link">Share</a>
+      <a data-url="https://gitee.com/no-two-no-small/no-two-no-small/%E8%B4%A8%E6%95%B0%E7%9A%84%E5%AD%A4%E7%8B%AC.html" data-id="ckyldh0n10001mceqheqnd2zs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/no-two-no-small/tags/%E5%A5%BD%E6%96%87/" rel="tag">好文</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/no-two-no-small/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a></li></ul>
@@ -184,7 +321,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gitee.com/no-two-no-small/no-two-no-small/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2.html" data-id="ckyk40wp9000bckeqdmtm4l30" class="article-share-link">Share</a>
+      <a data-url="https://gitee.com/no-two-no-small/no-two-no-small/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2.html" data-id="ckyldh0n60004mceq224pdiic" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/no-two-no-small/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
@@ -235,7 +372,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gitee.com/no-two-no-small/no-two-no-small/hello-world.html" data-id="ckyk40wpa000cckeq547e7u19" class="article-share-link">Share</a>
+      <a data-url="https://gitee.com/no-two-no-small/no-two-no-small/hello-world.html" data-id="ckyldh0n70005mceq8ud66o3s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -255,7 +392,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/no-two-no-small/categories/%E4%BD%95%E5%BA%B7/">何康</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/no-two-no-small/categories/%E4%BD%95%E5%BA%B7/%E5%A5%BD%E6%96%87%E5%88%86%E4%BA%AB/">好文分享</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/no-two-no-small/categories/%E4%BD%95%E5%BA%B7/%E5%A5%BD%E6%96%87%E5%88%86%E4%BA%AB/%E8%BD%AC%E8%BD%BD/">转载</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/no-two-no-small/categories/%E4%BD%95%E5%BA%B7/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/no-two-no-small/categories/%E4%BD%95%E5%BA%B7/">何康</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/no-two-no-small/categories/%E4%BD%95%E5%BA%B7/%E5%A5%BD%E6%96%87%E5%88%86%E4%BA%AB/">好文分享</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/no-two-no-small/categories/%E4%BD%95%E5%BA%B7/%E5%A5%BD%E6%96%87%E5%88%86%E4%BA%AB/%E8%BD%AC%E8%BD%BD/">转载</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/no-two-no-small/categories/%E4%BD%95%E5%BA%B7/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/">杂七杂八</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/no-two-no-small/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/no-two-no-small/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/C/">C</a></li></ul></li></ul>
     </div>
   </div>
 
@@ -265,7 +402,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/no-two-no-small/tags/%E5%A5%BD%E6%96%87/" rel="tag">好文</a></li><li class="tag-list-item"><a class="tag-list-link" href="/no-two-no-small/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/no-two-no-small/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/no-two-no-small/tags/C/" rel="tag">C</a></li><li class="tag-list-item"><a class="tag-list-link" href="/no-two-no-small/tags/%E5%A5%BD%E6%96%87/" rel="tag">好文</a></li><li class="tag-list-item"><a class="tag-list-link" href="/no-two-no-small/tags/%E6%9E%97%E9%94%90/" rel="tag">林锐</a></li><li class="tag-list-item"><a class="tag-list-link" href="/no-two-no-small/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/no-two-no-small/tags/%E7%94%B5%E5%AD%90%E4%B9%A6/" rel="tag">电子书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/no-two-no-small/tags/%E7%BB%83%E4%B9%A0%E9%A2%98/" rel="tag">练习题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/no-two-no-small/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a></li></ul>
     </div>
   </div>
 
@@ -275,7 +412,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/no-two-no-small/tags/%E5%A5%BD%E6%96%87/" style="font-size: 10px;">好文</a> <a href="/no-two-no-small/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/no-two-no-small/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 10px;">转载</a>
+      <a href="/no-two-no-small/tags/C/" style="font-size: 20px;">C</a> <a href="/no-two-no-small/tags/%E5%A5%BD%E6%96%87/" style="font-size: 10px;">好文</a> <a href="/no-two-no-small/tags/%E6%9E%97%E9%94%90/" style="font-size: 10px;">林锐</a> <a href="/no-two-no-small/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/no-two-no-small/tags/%E7%94%B5%E5%AD%90%E4%B9%A6/" style="font-size: 10px;">电子书</a> <a href="/no-two-no-small/tags/%E7%BB%83%E4%B9%A0%E9%A2%98/" style="font-size: 10px;">练习题</a> <a href="/no-two-no-small/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 10px;">转载</a>
     </div>
   </div>
 
@@ -295,6 +432,14 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/no-two-no-small/%E6%AF%8F%E6%97%A5%E9%98%85%E8%AF%BB.html">高质量C编程指南(林锐)</a>
+          </li>
+        
+          <li>
+            <a href="/no-two-no-small/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A0%E9%A2%98.html">C语言练习题</a>
+          </li>
         
           <li>
             <a href="/no-two-no-small/%E8%B4%A8%E6%95%B0%E7%9A%84%E5%AD%A4%E7%8B%AC.html">《质数的孤独》</a>
