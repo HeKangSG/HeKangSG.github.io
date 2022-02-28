@@ -7,15 +7,15 @@
   
   <title>C语言练习题 | 尔康</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编程题  输入三个整数作为三角形的三条边，判断如果不能构成一个三角形，则输出“not a triangle”;否则如能构成一个直角三角形，则输出”yes”;否则输出”no”。123456789101112131415161718#include &lt;stdio.h&gt;int main()&amp;#123;	int a, b, c;	while(scanf(&quot;%d %d %d&quot;">
+  <meta name="description" content="编程题  输入三个整数作为三角形的三条边，判断如果不能构成一个三角形，则输出“not a triangle”;否则如能构成一个直角三角形，则输出”yes”;否则输出”no”。 123456789101112131415161718#include &lt;stdio.h&gt;int main()&amp;#123;	int a, b, c;	while(scanf(&quot;%d %d %d&amp;quot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言练习题">
 <meta property="og:url" content="https://gitee.com/no-two-no-small/no-two-no-small/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A0%E9%A2%98.html">
 <meta property="og:site_name" content="尔康">
-<meta property="og:description" content="编程题  输入三个整数作为三角形的三条边，判断如果不能构成一个三角形，则输出“not a triangle”;否则如能构成一个直角三角形，则输出”yes”;否则输出”no”。123456789101112131415161718#include &lt;stdio.h&gt;int main()&amp;#123;	int a, b, c;	while(scanf(&quot;%d %d %d&quot;">
+<meta property="og:description" content="编程题  输入三个整数作为三角形的三条边，判断如果不能构成一个三角形，则输出“not a triangle”;否则如能构成一个直角三角形，则输出”yes”;否则输出”no”。 123456789101112131415161718#include &lt;stdio.h&gt;int main()&amp;#123;	int a, b, c;	while(scanf(&quot;%d %d %d&amp;quot">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-19T06:43:00.000Z">
-<meta property="article:modified_time" content="2022-02-09T16:52:56.587Z">
+<meta property="article:modified_time" content="2022-02-28T10:39:57.673Z">
 <meta property="article:author" content="He Kang">
 <meta property="article:tag" content="C">
 <meta property="article:tag" content="练习题">
@@ -96,12 +96,14 @@
       
         <p>编程题</p>
 <ol>
-<li>输入三个整数作为三角形的三条边，判断如果不能构成一个三角形，则输出“not a triangle”;否则如能构成一个直角三角形，则输出”yes”;否则输出”no”。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int a, b, c;</span><br><span class="line">	while(scanf(&quot;%d %d %d&quot;,&amp;a, &amp;b,&amp;c)!=EOF)  //实现多组数据重复输入</span><br><span class="line">	if((a+b&gt;c)&amp;&amp;(a+c&gt;b)&amp;&amp;(b+c&gt;a))  //判断是否构成三角形</span><br><span class="line">		&#123;</span><br><span class="line">			//判断是否构成直角三角形</span><br><span class="line">			if((a*a + b*b == c*c)||(a*a + c*c == b*b)||(b*b + c*c == a*a))</span><br><span class="line">			printf(&quot;yes\n&quot;);</span><br><span class="line">			else printf(&quot;no\n&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	else printf(&quot;not a triangle\n&quot;);</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-复习：<a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-function-scanf.html">C 库函数 - scanf()</a></li>
-</ol>
-<ol start="2">
-<li>请编程实现从键盘输入10个数，求输入的正数之和。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int a[10];</span><br><span class="line">	int i = 0;</span><br><span class="line">	int j = 0;</span><br><span class="line">	int k = 0;</span><br><span class="line">	int b[10];</span><br><span class="line">	int sum;</span><br><span class="line">	while(i &lt; 10)</span><br><span class="line">		&#123;</span><br><span class="line">			scanf(&quot;%d&quot;, &amp;a[i]);   //将10个数依次传递到数组a里</span><br><span class="line">			if(a[i] &gt; 0)</span><br><span class="line">				&#123;</span><br><span class="line">					b[j] = a[i];  //将数组a中符合条件的元素传递到数组b里</span><br><span class="line">					j ++;</span><br><span class="line">				&#125; </span><br><span class="line">			i ++;</span><br><span class="line">		&#125;</span><br><span class="line">	</span><br><span class="line">	for(k = 0; k &lt; j; k++)</span><br><span class="line">	sum += b[k];                  //求和</span><br><span class="line">	printf(&quot;%d\n&quot;, sum);</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-复习:<a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-arrays.html">C 数组</a></li>
+<li><p>输入三个整数作为三角形的三条边，判断如果不能构成一个三角形，则输出“not a triangle”;否则如能构成一个直角三角形，则输出”yes”;否则输出”no”。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int a, b, c;</span><br><span class="line">	while(scanf(&quot;%d %d %d&quot;,&amp;a, &amp;b,&amp;c)!=EOF)  //实现多组数据重复输入</span><br><span class="line">	if((a+b&gt;c)&amp;&amp;(a+c&gt;b)&amp;&amp;(b+c&gt;a))  //判断是否构成三角形</span><br><span class="line">		&#123;</span><br><span class="line">			//判断是否构成直角三角形</span><br><span class="line">			if((a*a + b*b == c*c)||(a*a + c*c == b*b)||(b*b + c*c == a*a))</span><br><span class="line">			printf(&quot;yes\n&quot;);</span><br><span class="line">			else printf(&quot;no\n&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	else printf(&quot;not a triangle\n&quot;);</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>复习：<a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-function-scanf.html">C 库函数 - scanf()</a></p>
+<span id="more"></span></li>
+<li><p>请编程实现从键盘输入10个数，求输入的正数之和。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int a[10];</span><br><span class="line">	int i = 0;</span><br><span class="line">	int j = 0;</span><br><span class="line">	int k = 0;</span><br><span class="line">	int b[10];</span><br><span class="line">	int sum;</span><br><span class="line">	while(i &lt; 10)</span><br><span class="line">		&#123;</span><br><span class="line">			scanf(&quot;%d&quot;, &amp;a[i]);   //将10个数依次传递到数组a里</span><br><span class="line">			if(a[i] &gt; 0)</span><br><span class="line">				&#123;</span><br><span class="line">					b[j] = a[i];  //将数组a中符合条件的元素传递到数组b里</span><br><span class="line">					j ++;</span><br><span class="line">				&#125; </span><br><span class="line">			i ++;</span><br><span class="line">		&#125;</span><br><span class="line">	</span><br><span class="line">	for(k = 0; k &lt; j; k++)</span><br><span class="line">	sum += b[k];                  //求和</span><br><span class="line">	printf(&quot;%d\n&quot;, sum);</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>复习:<a target="_blank" rel="noopener" href="https://www.runoob.com/cprogramming/c-arrays.html">C 数组</a></p>
+</li>
 </ol>
 <ol start="3">
 <li><p>请编程实现输出自然数1到1000中含有数字2的数的个数。</p>
@@ -167,7 +169,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://gitee.com/no-two-no-small/no-two-no-small/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A0%E9%A2%98.html" data-id="ckzghm0160000mseq5pkl0knx" class="article-share-link">Share</a>
+      <a data-url="https://gitee.com/no-two-no-small/no-two-no-small/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A0%E9%A2%98.html" data-id="cl06kpth000048ceq0hrj33dz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/no-two-no-small/tags/C/" rel="tag">C</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/no-two-no-small/tags/%E7%BB%83%E4%B9%A0%E9%A2%98/" rel="tag">练习题</a></li></ul>
@@ -177,6 +179,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/no-two-no-small/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          测试博客
+        
+      </div>
+    </a>
   
   
     <a href="/no-two-no-small/%E8%B4%A8%E6%95%B0%E7%9A%84%E5%AD%A4%E7%8B%AC.html" id="article-nav-older" class="article-nav-link-wrap">
@@ -226,7 +237,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/no-two-no-small/archives/2022/01/">一月 2022</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/no-two-no-small/archives/2022/02/">二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/no-two-no-small/archives/2022/01/">一月 2022</a></li></ul>
     </div>
   </div>
 
@@ -239,15 +250,15 @@
       <ul>
         
           <li>
+            <a href="/no-two-no-small/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2.html">测试博客</a>
+          </li>
+        
+          <li>
             <a href="/no-two-no-small/C%E8%AF%AD%E8%A8%80%E7%BB%83%E4%B9%A0%E9%A2%98.html">C语言练习题</a>
           </li>
         
           <li>
             <a href="/no-two-no-small/%E8%B4%A8%E6%95%B0%E7%9A%84%E5%AD%A4%E7%8B%AC.html">《质数的孤独》</a>
-          </li>
-        
-          <li>
-            <a href="/no-two-no-small/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2.html">测试博客</a>
           </li>
         
       </ul>
