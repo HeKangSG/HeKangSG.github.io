@@ -2594,3 +2594,7 @@ ul.breadcrumb li:last-child {
     padding: 10px 12px;
   }
 }
+.giscus {
+  max-width: unset;
+  box-sizing: border-box;
+}
