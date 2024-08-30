@@ -20,29 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"github.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Oops～，我崩溃了！找不到你想要的页面 :(">
-<meta property="og:type" content="website">
-<meta property="og:title" content="404">
-<meta property="og:url" content="https://github.com/HeKangSG/HeKangSG.github.io/404/index.html">
+    <meta name="description" content="是什么 Hutool的BeanUtil.toBean方法用于将一个Map对象转换为一个指定类型的Java对象（Bean）。它会根据Map中的键值对，将对应的值赋给Java对象中的属性。 BeanUtil.toBean  主要功能 类型转换：BeanUtil.toBean会尝试进行基本的类型转换。例如，如果Map中的值是String类型，而Bean中的属性是Integer类型，它会尝试将String">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BeanUtil.toBean">
+<meta property="og:url" content="https://github.com/HeKangSG/HeKangSG.github.io/BeanUtil-toBean.html">
 <meta property="og:site_name" content="ErKang">
-<meta property="og:description" content="Oops～，我崩溃了！找不到你想要的页面 :(">
+<meta property="og:description" content="是什么 Hutool的BeanUtil.toBean方法用于将一个Map对象转换为一个指定类型的Java对象（Bean）。它会根据Map中的键值对，将对应的值赋给Java对象中的属性。 BeanUtil.toBean  主要功能 类型转换：BeanUtil.toBean会尝试进行基本的类型转换。例如，如果Map中的值是String类型，而Bean中的属性是Integer类型，它会尝试将String">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-07T11:45:23.000Z">
-<meta property="article:modified_time" content="2023-03-07T11:45:37.782Z">
+<meta property="article:published_time" content="2024-08-28T04:22:48.000Z">
+<meta property="article:modified_time" content="2024-08-28T06:48:52.256Z">
 <meta property="article:author" content="Er Kang">
 <meta property="article:tag" content="JAVA | SpringBoot">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://github.com/HeKangSG/HeKangSG.github.io/404/">
+<link rel="canonical" href="https://github.com/HeKangSG/HeKangSG.github.io/BeanUtil-toBean.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"https://github.com/HeKangSG/HeKangSG.github.io/404/index.html","path":"404/index.html","title":"404"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://github.com/HeKangSG/HeKangSG.github.io/BeanUtil-toBean.html","path":"BeanUtil-toBean.html","title":"BeanUtil.toBean"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>404 | ErKang
-</title>
+<title>BeanUtil.toBean | ErKang</title>
   
 
 
@@ -148,35 +147,104 @@
 
     </div>
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
 
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN"><header class="post-header">
+  
 
-<h1 class="post-title" itemprop="name headline">404
-</h1>
 
-<div class="post-meta-container">
-    <div class="post-description">Oops～，我崩溃了！找不到你想要的页面 :(</div>
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/HeKangSG/HeKangSG.github.io/BeanUtil-toBean.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/KirBi.gif">
+      <meta itemprop="name" content="Er Kang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ErKang">
+      <meta itemprop="description" content="个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="BeanUtil.toBean | ErKang">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          BeanUtil.toBean
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-08-28 12:22:48 / 修改时间：14:48:52" itemprop="dateCreated datePublished" datetime="2024-08-28T12:22:48+08:00">2024-08-28</time>
+    </span>
+
+  
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      <div class="post-body">
-          
-      </div>
-      
-      
-      
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1>是什么</h1>
+Hutool的BeanUtil.toBean方法用于将一个Map对象转换为一个指定类型的Java对象（Bean）。它会根据Map中的键值对，将对应的值赋给Java对象中的属性。<br>
+<a target="_blank" rel="noopener" href="https://doc.hutool.cn/pages/BeanUtil">BeanUtil.toBean</a>
+
+<h1>主要功能</h1>
+类型转换：BeanUtil.toBean会尝试进行基本的类型转换。例如，如果Map中的值是String类型，而Bean中的属性是Integer类型，它会尝试将String转换为Integer。<br>
+属性映射：Map中的键与Bean中的属性名进行匹配，将对应的值赋值给Bean的属性。
+
+
+<h1>使用场景</h1>
+将请求参数转换为对象：在Web开发中，通常会从前端接收到一个包含多个参数的Map，通过toBean可以直接将这些参数转换为一个Java对象，方便后续操作。<br>
+动态生成对象：在某些动态场景下，数据可能以Map的形式存储，但业务逻辑需要操作Java对象，此时可以使用toBean方法将Map转换为对应的Java对象。
+
+<h1>在代码中使用</h1>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BeanUtil.toBean(userService.getUserByUsername(username), UserActualRespDTO.class)</span><br></pre></td></tr></table></figure>
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/%E7%94%A8%E6%88%B7%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%8E%A5%E5%8F%A3%E8%BF%94%E5%9B%9E%E8%84%B1%E6%95%8F.html" rel="prev" title="用户敏感信息接口返回脱敏">
+                  <i class="fa fa-chevron-left"></i> 用户敏感信息接口返回脱敏
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%AE%BE%E8%AE%A1.html" rel="next" title="数据库表设计">
+                  数据库表设计 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
     
