@@ -20,26 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"github.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ErKang">
-<meta property="og:url" content="https://github.com/HeKangSG/HeKangSG.github.io/archives/index.html">
+    <meta name="description" content="作用 用于将一个 Java Bean（对象）的属性复制到另一个 Java Bean 中  使用场景  ⭐属性复制：BeanUtil.copyProperties可以将一个对象中的属性值复制到另一个对象中，类似于Spring的BeanUtils和Apache Commons的BeanUtils。 ⭐忽略空值：Hutool的BeanUtil提供了可以忽略空值属性的复制选项，这样就不会覆盖目标对象中的非">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BeanUtils.copyProperties">
+<meta property="og:url" content="https://github.com/HeKangSG/HeKangSG.github.io/BeanUtils-copyProperties.html">
 <meta property="og:site_name" content="ErKang">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="作用 用于将一个 Java Bean（对象）的属性复制到另一个 Java Bean 中  使用场景  ⭐属性复制：BeanUtil.copyProperties可以将一个对象中的属性值复制到另一个对象中，类似于Spring的BeanUtils和Apache Commons的BeanUtils。 ⭐忽略空值：Hutool的BeanUtil提供了可以忽略空值属性的复制选项，这样就不会覆盖目标对象中的非">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-09-02T14:10:21.000Z">
+<meta property="article:modified_time" content="2024-09-03T07:26:53.851Z">
 <meta property="article:author" content="Er Kang">
 <meta property="article:tag" content="JAVA | SpringBoot">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://github.com/HeKangSG/HeKangSG.github.io/archives/">
+<link rel="canonical" href="https://github.com/HeKangSG/HeKangSG.github.io/BeanUtils-copyProperties.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://github.com/HeKangSG/HeKangSG.github.io/BeanUtils-copyProperties.html","path":"BeanUtils-copyProperties.html","title":"BeanUtils.copyProperties"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | ErKang</title>
+<title>BeanUtils.copyProperties | ErKang</title>
   
 
 
@@ -74,7 +76,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">ErKang</h1>
+      <p class="site-title">ErKang</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">Java后端</p>
@@ -145,273 +147,129 @@
 
     </div>
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 22 篇日志。 继续努力。</span>
-      </div>
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2024</span>
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/HeKangSG/HeKangSG.github.io/BeanUtils-copyProperties.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/KirBi.gif">
+      <meta itemprop="name" content="Er Kang">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ErKang">
+      <meta itemprop="description" content="个人博客">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="BeanUtils.copyProperties | ErKang">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          BeanUtils.copyProperties
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-09-02 22:10:21" itemprop="dateCreated datePublished" datetime="2024-09-02T22:10:21+08:00">2024-09-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-09-03 15:26:53" itemprop="dateModified" datetime="2024-09-03T15:26:53+08:00">2024-09-03</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1>作用</h1>
+用于将一个 Java Bean（对象）的属性复制到另一个 Java Bean 中
+
+<h1>使用场景</h1>
+<!-- ⭐DTO 与实体对象转换：在分层架构中，通常会有一个数据传输对象(DTO)用于传输数据，而实体对象(DO)用于持久化。在这种情况下，可以使用copyProperties将DTO中的数据复制到实体对象中，或反之亦然。<br>
+⭐简化对象复制：当两个对象具有相同或类似的属性时，可以使用copyProperties方法减少手动复制属性的工作量。<br>
+⭐减少重复代码：通过使用copyProperties，可以避免编写重复的代码来逐个设置属性，提高代码的可维护性。<br> -->
+⭐属性复制：BeanUtil.copyProperties可以将一个对象中的属性值复制到另一个对象中，类似于Spring的BeanUtils和Apache Commons的BeanUtils。<br>
+⭐忽略空值：Hutool的BeanUtil提供了可以忽略空值属性的复制选项，这样就不会覆盖目标对象中的非空属性。<br>
+⭐支持不同类型的对象：源对象和目标对象可以是不同的类，只要它们有相同的属性名和兼容的类型。<br>
+⭐支持嵌套属性复制：如果属性本身也是一个Java Bean，BeanUtil.copyProperties可以递归地复制这些嵌套的属性。<br>
+<span id="more"></span>
+
+<h1>在代码中使用</h1>
+<p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">import cn.hutool.core.bean.BeanUtil;</span><br><span class="line"></span><br><span class="line">public class Example &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        SourceBean source = new SourceBean();</span><br><span class="line">        source.setName(&quot;Alice&quot;);</span><br><span class="line">        source.setAge(25);</span><br><span class="line">        source.setAddress(&quot;Wonderland&quot;);</span><br><span class="line"></span><br><span class="line">        TargetBean target = new TargetBean();</span><br><span class="line">        target.setName(&quot;Bob&quot;); // 目标对象原有的值</span><br><span class="line"></span><br><span class="line">        // 复制属性，忽略空值</span><br><span class="line">        BeanUtil.copyProperties(source, target, true);</span><br><span class="line"></span><br><span class="line">        System.out.println(target.getName());    // 输出: Alice</span><br><span class="line">        System.out.println(target.getAge());     // 输出: 25</span><br><span class="line">        System.out.println(target.getAddress()); // 输出: Wonderland</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class SourceBean &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">    private String address;</span><br><span class="line"></span><br><span class="line">    // Getters and setters</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class TargetBean &#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">    private String address;</span><br><span class="line"></span><br><span class="line">    // Getters and setters</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</p>
+
+
+<h1>注意事项</h1>
+<!-- ⭐属性名称一致：copyProperties 方法依赖于源对象和目标对象具有相同的属性名称和兼容的类型。否则，可能会导致属性复制失败或数据不正确。<br>
+⭐性能考虑：虽然 copyProperties 是一个方便的工具，但在性能要求高的应用中，可能需要考虑其性能开销，特别是在复制大量数据时。<br>
+⭐异常处理：copyProperties 可能会抛出 IllegalAccessException、InvocationTargetException 等异常，所以在调用时需要进行适当的异常处理。<br> -->
+⭐忽略空值：copyProperties的第三个参数可以设置为true，这样在复制属性时会忽略源对象中的空值，不会覆盖目标对象中已有的值。<br>
+⭐简单易用：Hutool的BeanUtil.copyProperties方法使用简单，代码更简洁，并且不需要捕获异常（如Apache Commons的BeanUtils）。<br>
+⭐性能优化：相比其他类似工具，Hutool在内部实现上对性能做了优化，尤其是在大批量对象属性复制的情况下。<br>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-09-03T18:41:53+08:00"
-              content="2024-09-03">
-          09-03
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/Dubbo.html" itemprop="url">
-            <span itemprop="name">Dubbo</span>
-          </a>
-      </div>
+    <footer class="post-footer">
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/%E6%9D%91%E4%B8%8B%E5%AD%9D%E8%94%B5.html" rel="prev" title="村下孝蔵">
+                  <i class="fa fa-chevron-left"></i> 村下孝蔵
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Guava.html" rel="next" title="Guava">
+                  Guava <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-09-03T11:15:06+08:00"
-              content="2024-09-03">
-          09-03
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/Guava.html" itemprop="url">
-            <span itemprop="name">Guava</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-09-02T22:10:21+08:00"
-              content="2024-09-02">
-          09-02
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/BeanUtils-copyProperties.html" itemprop="url">
-            <span itemprop="name">BeanUtils.copyProperties</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-09-01T22:58:12+08:00"
-              content="2024-09-01">
-          09-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E6%9D%91%E4%B8%8B%E5%AD%9D%E8%94%B5.html" itemprop="url">
-            <span itemprop="name">村下孝蔵</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-08-28T22:18:57+08:00"
-              content="2024-08-28">
-          08-28
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E6%9E%84%E9%80%A0%E5%99%A8%E6%B3%A8%E5%85%A5.html" itemprop="url">
-            <span itemprop="name">构造器注入</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-08-28T22:17:47+08:00"
-              content="2024-08-28">
-          08-28
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E5%BC%80%E5%8F%91%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E5%8A%9F%E8%83%BD.html" itemprop="url">
-            <span itemprop="name">开发查询用户信息功能</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-08-28T14:23:22+08:00"
-              content="2024-08-28">
-          08-28
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E8%AE%BE%E8%AE%A1.html" itemprop="url">
-            <span itemprop="name">数据库表设计</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-08-28T12:22:48+08:00"
-              content="2024-08-28">
-          08-28
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/BeanUtil-toBean.html" itemprop="url">
-            <span itemprop="name">BeanUtil.toBean</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-08-27T10:13:31+08:00"
-              content="2024-08-27">
-          08-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E7%94%A8%E6%88%B7%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%8E%A5%E5%8F%A3%E8%BF%94%E5%9B%9E%E8%84%B1%E6%95%8F.html" itemprop="url">
-            <span itemprop="name">用户敏感信息接口返回脱敏</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-08-26T22:05:37+08:00"
-              content="2024-08-26">
-          08-26
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E5%85%A8%E5%B1%80%E7%BB%9F%E4%B8%80%E8%BF%94%E5%9B%9E%E5%AE%9E%E4%BD%93.html" itemprop="url">
-            <span itemprop="name">全局统一返回实体</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-08-26T09:40:56+08:00"
-              content="2024-08-26">
-          08-26
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E6%8B%A6%E6%88%AA%E5%99%A8.html" itemprop="url">
-            <span itemprop="name">全局异常拦截器</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2024-08-24T22:07:04+08:00"
-              content="2024-08-24">
-          08-24
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E7%A0%81.html" itemprop="url">
-            <span itemprop="name">全局异常码(基于阿里规约)</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
+</div>
 
 
-    </div>
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
   </div>
   
   
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/archives/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
 </div>
   </main>
 
